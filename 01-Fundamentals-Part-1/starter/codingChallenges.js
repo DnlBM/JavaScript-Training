@@ -163,7 +163,7 @@ Test Data: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110.
 Test Data Bonus 1: Dolphins 97, 112 and 101. Koalas 109, 95, 123.
 
 Teste Data Bonus 2: Dolphins 97, 112, 101. Koalas 109, 95, 106.
-*/
+
 
 //Variables
 let dolphinsAvgScore = 10;
@@ -230,5 +230,35 @@ koalasAvgScore = calculateAvgScore(90, 90, 50);
 determineWinner(dolphinsAvgScore,koalasAvgScore);
 
 //Displaying the results in the console.
-console.log(message);
+console.log(message);*/
 
+/* Coding Challenge #4 
+
+Steven wants to build a very simple tip calculator for whenever he goes eating in a restaurant.
+In his country, its usual to tip 15% if the bill value is between 50 and 300. If the value is different,
+the  tip is 20%.
+
+1.Your taks is to calculate the tip, depeding on the bill value. Create a variable called
+'tip' for this. Its not allowed to use an if/else statement.
+
+2. Print a String to the console containing the bill value, the tip, and the final value (bill+tip).
+Example: The bill was 275, the tip was 41.25, and the total value is 316.25.
+
+TEST DATA: Test for bill values 275, 40 and 430.
+*/
+
+console.log("---------Test Data 1--------");
+let bill = 275;
+let tipPercentage;
+tipPercentage = bill >= 50 ? (bill <= 300 ? tipPercentage = 0.15 : tipPercentage = 0.2) : tipPercentage = 0.2;
+console.log(`The bill was ${bill}, the tip was ${tipPercentage * bill}, and the total value is ${tipPercentage * bill + bill}`);
+
+console.log("---------Test Data 2--------");
+bill = 40;
+tipPercentage = bill >= 50 ? (bill <= 300 ? tipPercentage = 0.15 : tipPercentage = 0.2) : tipPercentage = 0.2;
+console.log(`The bill was ${bill}, the tip was ${tipPercentage * bill}, and the total value is ${tipPercentage * bill + bill}`);
+
+console.log("---------Test Data 3--------");
+bill = 430;
+tipPercentage = bill >= 50 ? (bill <= 300 ? tipPercentage = 0.15 : tipPercentage = 0.2) : tipPercentage = 0.2;
+console.log(`The bill was ${bill}, the tip was ${tipPercentage * bill}, and the total value is ${tipPercentage * bill + bill}`);
