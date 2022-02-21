@@ -11,7 +11,7 @@ document.querySelector('.message').style.color = 'red';
 //VARIABLES------------------------------------------------------------------------
 
 //Maximum value for the random number + 1.
-const MAX_RANDOM = 100;
+const MAX_RANDOM = 101;
 
 //Random Number that will be decided on page load.
 let randomNum = 0;
