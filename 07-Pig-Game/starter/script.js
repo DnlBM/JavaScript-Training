@@ -40,7 +40,7 @@ function hold() {
     playerTwoCurrentScore.textContent = 0;
     if (playerOne.classList.contains('player--active')) {
         if (Number(playerOneScore.textContent) >= SCORE_TO_WIN) {
-            console.log('Player One Wins!');
+            alert('Player One Wins!');
             newGame();
         } else {
             playerOne.classList.remove('player--active');
@@ -48,7 +48,7 @@ function hold() {
         }
     } else {
         if (Number(playerTwoScore.textContent) >= SCORE_TO_WIN) {
-            console.log('Player Two Wins!');
+            alert('Player Two Wins!');
             newGame();
         } else {
             playerTwo.classList.remove('player--active');
