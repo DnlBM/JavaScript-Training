@@ -1,6 +1,7 @@
 'use strict';
 
 //Setting necessary objects.
+const SCORE_TO_WIN = 20;
 const btnNewGame = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
@@ -38,11 +39,21 @@ function hold() {
     playerTwoScore.textContent = Number(playerTwoScore.textContent) + Number(playerTwoCurrentScore.textContent);
     playerTwoCurrentScore.textContent = 0;
     if (playerOne.classList.contains('player--active')) {
-        playerOne.classList.remove('player--active');
-        playerTwo.classList.add('player--active');
+        if (Number(playerOneScore.textContent) >= SCORE_TO_WIN) {
+            console.log('Player One Wins!');
+            newGame();
+        } else {
+            playerOne.classList.remove('player--active');
+            playerTwo.classList.add('player--active');
+        }
     } else {
-        playerTwo.classList.remove('player--active');
-        playerOne.classList.add('player--active');
+        if (Number(playerTwoScore.textContent) >= SCORE_TO_WIN) {
+            console.log('Player Two Wins!');
+            newGame();
+        } else {
+            playerTwo.classList.remove('player--active');
+            playerOne.classList.add('player--active');
+        }
     }
 }
 
